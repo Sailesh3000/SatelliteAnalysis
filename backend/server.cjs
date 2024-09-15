@@ -24,7 +24,9 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://satellite-analysis.vercel.app' // Replace with your specific origin
+}));
 app.use('/uploads', express.static(uploadsDir));
 
 app.post('/api/generate-video', upload.fields([{ name: 'image1' }, { name: 'image2' }]), (req, res) => {

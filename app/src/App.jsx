@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import Modal from 'react-modal';
 import './App.css'; 
+import ReactPlayer from 'react-player';
 
 Modal.setAppElement('#root');
 
@@ -72,10 +73,8 @@ function App() {
 
   <div className="video-output">
     <h2>Generated Video:</h2>
-    <video controls width="900" height="600">
-      <source src="../backend/uploads/1726400712714_interpolation_video.avi" type="video/avi" />
-      Your browser does not support the video tag.
-    </video>
+      <ReactPlayer url={videoUrl} controls />
+    {/* <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' /> */}
   </div>
     </div>
   );

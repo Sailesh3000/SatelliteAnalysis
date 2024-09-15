@@ -43,7 +43,7 @@ function App() {
     formData.append("image2", selectedImages[1]);
 
     try {
-      const response = await fetch("https://vercel.com/saileshs-projects-2db51030/satellite-analysis-m4gg/api/generate-video", {
+      const response = await fetch("https://satellite-analysis-m4gg.vercel.app/api/generate-video", {
         method: "POST",
         body: formData,
       });

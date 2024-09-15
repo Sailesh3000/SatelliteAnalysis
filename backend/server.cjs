@@ -45,10 +45,10 @@ app.post('/api/generate-video', upload.fields([{ name: 'image1' }, { name: 'imag
       return res.status(500).json({ error: 'Error creating video' });
     }
     console.log(`stdout: ${stdout}`);
-    res.json({ videoUrl: `http://localhost:${port}/uploads/${path.basename(outputVideoPath)}` });
+    res.json({ videoUrl: `https://vercel.com/saileshs-projects-2db51030/satellite-analysis-m4gg/uploads/${path.basename(outputVideoPath)}` });
   });
 });
 
 app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+  console.log(`Server running on https://vercel.com/saileshs-projects-2db51030/satellite-analysis-m4gg`);
 });
